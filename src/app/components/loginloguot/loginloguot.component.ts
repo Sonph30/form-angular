@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
 import {postDataForm} from '../../services/home/home.service'
-import {API_DEFAULT} from '../../api/login/login'
+import {API_DEFAULT} from '../../api/home/home'
 
 interface Food {
   value: string;
