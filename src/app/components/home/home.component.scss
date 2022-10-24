@@ -1,0 +1,131 @@
+.container {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.example-form {
+    max-width: 500px;
+    width: 100%;
+    background: rgb(134, 128, 128);
+    border-radius: 10px;
+    margin: auto;
+    h2 {
+        text-align: center;
+        margin: 0;
+        padding-top: 15px;
+    }
+    input {
+        padding: 10px 0 10px 15px;
+        width: inherit;
+        box-sizing: border-box;
+        border-radius: 5px;
+        background: #fff;
+    }
+    ::ng-deep .mat-form-field-infix {
+        display: block;
+        width: 100%;
+        ::ng-deep .mat-date-range-input-start-wrapper {
+            height: 35px;
+            width: 100%;
+        }
+
+        ::ng-deep .mat-form-field-label-wrapper {
+            top: 0 !important;
+        }
+    }
+    ::ng-deep .mat-form-field-flex {
+        padding: 0 !important;
+    }
+
+    .gioi-tinh {
+        width: 40%;
+        padding: 15px 10px 0;
+        ::ng-deep .mat-form-field {
+            width: 100%;
+        }
+    }
+
+    .Date {
+        // display: flex;
+        width: 80%;
+        padding: 15px 10px 0;
+
+        ::ng-deep .mat-form-field {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+
+    ::ng-deep .mat-form-field-label-wrapper {
+        // top: 0;
+        &:focus {
+            top: -0.84375em !important;
+        }
+
+        ::ng-deep .mat-form-field-appearance-fill .mat-form-field-label {
+            top: 0;
+        }
+    }
+}
+
+.example-full-width {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 10px 0;
+}
+
+::ng-deep .mat-form-field-flex {
+    background-color: transparent !important;
+
+    .mat-form-field-label {
+        color: #000;
+    }
+}
+
+.mat-radio-group {
+    padding: 5px 10px;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+}
+
+.example-button-row {
+    margin: 8px 8px 8px 0;
+    text-align: right;
+
+    .submit-btn {
+        border: 1px solid #ccc;
+        width: 100px;
+        padding: 6px 18px;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: red;
+            color: blue;
+        }
+    }
+}
+
+.example-section {
+    margin: 12px 0;
+}
+
+.example-margin {
+    margin: 0 12px;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 4px;
+}
+
+.mat-radio-group {
+    display: flex;
+    flex-direction: row;
+}
+
+::ng-deep .example-form-field {
+    margin: 0 8px 16px 0;
+  }

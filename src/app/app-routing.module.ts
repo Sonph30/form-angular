@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { LoginloguotComponent } from './loginloguot/loginloguot.component';
-import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './header/header.component';
+import { LoginloguotComponent } from './components/loginloguot/loginloguot.component';
+import { HomeComponent } from './components/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
 
 const routes: Routes = [
   { path: 'Login', component: LoginloguotComponent },

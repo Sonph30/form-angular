@@ -1,0 +1,137 @@
+<div class="container">
+  <div class="form">
+    <form class="example-form" [formGroup]="userForm">
+      <h2>Form validation</h2>
+      <div>
+        <div>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Name</mat-label>
+            <input
+              matInput
+              placeholder="Your Name"
+              matInput
+              name="username"
+              required
+              minlength="6"
+              formControlName="name"
+            />
+            <mat-error *ngIf="!userForm.value.name">
+              Name is required
+            </mat-error>
+          </mat-form-field>
+          <!-- Email -->
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input
+              matInput
+              placeholder="Your Email"
+              id="email"
+              matInput
+              type="email"
+              name="email"
+              required
+              minlength="6"
+              aria-describedby="emailHid"
+              formControlName="email"
+            />
+            <mat-error *ngIf="!userForm.value.email">
+              Email is required
+            </mat-error>
+          </mat-form-field>
+
+          <!-- Adress -->
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Address</mat-label>
+            <input
+              matInput
+              placeholder="Your Address"
+              id="address"
+              name="address"
+              required
+              formControlName="address"
+            />
+            <mat-error *ngIf="!userForm.value.address">
+                address is required
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input
+              matInput
+              placeholder="Your Password"
+              type="password"
+              id="password"
+              aria-describedby="passwordHid"
+              name="password"
+              required
+              minlength="6"
+              formControlName="password"
+            />
+            <!-- <small
+                id="passwordHid"
+                *ngIf="!password?.valid && (password?.dirty || password?.touched)"
+                >password is invalid or empty</small
+              > -->   <mat-error *ngIf="!userForm.value.password">
+                password is required
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Number</mat-label>
+            <input
+              matInput
+              placeholder="Your Number"
+              id="number"
+              type="number"
+              name="number"
+              required
+              minlength="10"
+              maxlength="10"
+              formControlName="number"
+            />
+            <mat-error *ngIf="!userForm.value.number">
+                number is required
+            </mat-error>
+          </mat-form-field>
+
+          <div class="gioi-tinh">
+            <mat-form-field appearance="fill">
+              <mat-label>Giới tính</mat-label>
+              <mat-select (selectionChange)="changeGender($event)">
+                <mat-option *ngFor="let food of foods" [value]="food.value">
+                  {{ food.viewValue }}
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="!userForm.value.gioiTinh">
+                gioiTinh is required
+            </mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="Date">
+            <mat-form-field  appearance="fill">
+              <mat-label>Ngày tốt nghiệp</mat-label>
+              <mat-date-range-input   [rangePicker]="picker">
+                <input matStartDate placeholder="Ngày bắt đầu" placformControlName="NgTotNghiep" eholder="Bắt đầu từ" #dateRangeStart>
+                <input matEndDate placeholder="Ngày kết thúc" #dateRangeEnd (dateChange)="dateRangeChange(dateRangeStart, dateRangeEnd)">
+              </mat-date-range-input>
+              <mat-hint>DD/MM/YYYY – DD/MM/YYYY</mat-hint>
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-date-range-picker #picker></mat-date-range-picker>
+    
+              <!-- <mat-error *ngIf="date.controls.startGraduate.hasError('matStartDateInvalid')">Ngày bắt đầu không được bỏ trống -->
+              <!-- </mat-error> -->
+              <!-- <mat-error *ngIf="date.controls. endGraduate.hasError('matEndDateInvalid')">Không được bỏ trống ngày tốt nghiệp -->
+              <!-- </mat-error> -->
+            </mat-form-field>
+          </div>
+
+          <div class="example-button-row">
+            <button class="submit-btn" (click)="onSubmit()">Submit</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
