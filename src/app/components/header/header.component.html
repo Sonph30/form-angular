@@ -1,1 +1,12 @@
-<p>header works!</p>
+<div>
+  <input type="text" (input)="getTitle($event)" />
+  <input type="text" (input)="getBody($event)" />
+  <button (click)="handleCreatePost()">Add</button>
+  <div *ngFor="let item of itemPosts" class="content-post">
+    <div class="id">{{ item.id }}</div>
+    <div class="title" (click)="handleUpdatePost(item.id)">{{ item.title }}</div>
+    <p class="body">{{ item.body }}</p>
+    <div (click)="updatePost(item.id)"><fa-icon [icon]="faSquare"></fa-icon></div>
+    <span (click)="deleteItem(item.id)">&#10005;</span>
+  </div>
+</div>

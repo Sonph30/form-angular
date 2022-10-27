@@ -7,7 +7,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,9 +20,25 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LauoutComponent } from './components/lauout/lauout.component';
+import { TodoComponent } from './components/todo/todo.component';
+import { FormDataComponent } from './components/form-data/form-data.component';
+import { AddDataComponent } from './components/form-data/form-add-data/add-data.component';
+import { EditDataComponent } from './components/form-data/form-edit-data/edit-data.component';
+import { DeleteDataComponent } from './components/form-data/form-delete-data/delete-data.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginloguotComponent, HomeComponent, HeaderComponent, LauoutComponent],
+  declarations: [
+    AppComponent,
+    LoginloguotComponent,
+    HomeComponent,
+    HeaderComponent,
+    LauoutComponent,
+    TodoComponent,
+    FormDataComponent,
+    AddDataComponent,
+    EditDataComponent,
+    DeleteDataComponent
+  ],
   imports: [
     HttpClientModule,
     BrowserModule,
@@ -33,9 +51,12 @@ import { LauoutComponent } from './components/lauout/lauout.component';
     MatSelectModule,
     MatRadioModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule,
+    MatTableModule,
+    MatDialogModule
   ],
-  providers: [{provide: LOCALE_ID, useValue: 'en-nz'}],
+  providers: [{ provide: LOCALE_ID, useValue: 'en-nz' }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

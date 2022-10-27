@@ -1,0 +1,29 @@
+<form class="example-form" [formGroup]="formAddData">
+  <div class="header">
+    <h3>Thêm dữ liệu</h3>
+    <fa-icon [icon]="faClose" class="icon-header" (click)="closeForm()"></fa-icon>
+  </div>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Tên danh mục</mat-label>
+    <input matInput placeholder="" value="" formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Mã danh mục</mat-label>
+    <input matInput placeholder="" value="" formControlName="weight">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Ghi chú</mat-label>
+    <input matInput placeholder="" value="" formControlName="symbol">
+  </mat-form-field>
+
+  <div class="fool-btn">
+      <button (click)="addData()">
+        Thêm
+      </button>
+      <button (click)="closeForm()">
+        Hủy
+      </button>
+  </div>
+</form>

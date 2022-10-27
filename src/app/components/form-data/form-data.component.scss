@@ -1,0 +1,56 @@
+table {
+    width: 100%;
+}
+
+.icon-add {
+    margin-right: 10px;
+    font-size: 25px;
+    color: blue;
+}
+.icon-edit {
+    font-size: 25px;
+    margin-right: 10px;
+    color: rgb(82, 228, 69);
+}
+
+.icon-delete {
+    font-size: 25px;
+    color: red;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+// css form add/ edit
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .icon-header {
+        font-size: 25px;
+    }
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.fool-btn {
+    display: flex;
+    flex-direction: row-reverse;
+
+    button {
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin: 0 10px;
+    }
+}
