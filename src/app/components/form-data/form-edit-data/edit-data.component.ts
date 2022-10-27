@@ -32,6 +32,7 @@ export class EditDataComponent {
       symbol: this.editForm.value.symbol
     }
     this.newItemEvent.emit(data);
+    this.dialogRef.close();
   }
   
   closeForm() {
